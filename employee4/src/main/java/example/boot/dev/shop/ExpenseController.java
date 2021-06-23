@@ -1,4 +1,4 @@
-package example.boot.dev.employee1;
+package example.boot.dev.shop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

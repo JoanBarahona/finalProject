@@ -1,4 +1,4 @@
-package example.boot.dev.employee1;
+package example.boot.dev.shop;
 
 
 import org.springframework.data.repository.CrudRepository;

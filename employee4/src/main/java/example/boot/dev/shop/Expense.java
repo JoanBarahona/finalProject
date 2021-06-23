@@ -1,4 +1,4 @@
-package example.boot.dev.employee1;
+package example.boot.dev.shop;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

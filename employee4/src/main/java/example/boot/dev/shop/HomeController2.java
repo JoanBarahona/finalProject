@@ -1,4 +1,4 @@
-package example.boot.dev.employee1;
+package example.boot.dev.shop;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.github.javafaker.Faker;
 
 @Controller
-public class HomeController {
+public class HomeController2 {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
@@ -100,3 +100,4 @@ public class HomeController {
 	}
 
 }
+		
