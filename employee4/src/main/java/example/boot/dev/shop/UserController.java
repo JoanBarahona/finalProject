@@ -71,7 +71,7 @@ public class UserController {
 		if (userFound.isPresent()) {
 
 			model.addAttribute("userfromController", userFound.get());
-			return "updateemployee";
+			return "updateuser";
 		}
 
 		else
