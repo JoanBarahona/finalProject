@@ -1,14 +1,16 @@
 package example.boot.dev.shop;
 
-import java.util.List;
+import java.util.*;
+import java.util.Optional;
+import java.lang.String;
 
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductRepository extends CrudRepository<Product,Integer> {
 	
-	List<Product> findByName(String name);
+	List<Product> findByBrand(String brand);
 
-	Product findById(int id);
+	Optional <Product> findById(int id);
 
 }
 

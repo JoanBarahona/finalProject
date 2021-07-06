@@ -45,7 +45,7 @@ public class ProductController {
 	@RequestMapping("/insertItem")
 	public String insertProduct (Product product, Model model) {
 
-		productRepository.insertProduct (product);
+		productRepository.save (product);
 
 		model.addAttribute("items", productRepository.findAll());
 		return "shoping/items.html";
@@ -61,9 +61,9 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/modifyItem", method = RequestMethod.GET)
-	public String modifyProduct (@RequestParam("itemId") Long id, Model model) {
-
-		model.addAttribute("item", productRepository.findById(id));
+	public String modifyProduct (@RequestParam("itemId") int id, Model model) {
+		
+		model.addAttribute("item", productRepository.findById(id).get());
 		//System.out.println(service.findById(id));
 		return "shoping/updateItem.html";
 	}
@@ -72,7 +72,7 @@ public class ProductController {
 	public String updateProduct (Product product, Model model) {
 
 		//System.out.println(product);
-		productRepository.insertProduct (product);
+		productRepository.save (product);
 		return "redirect:/products/show";
 	}
 	

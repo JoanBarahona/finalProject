@@ -12,7 +12,7 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	
 	private String brand;
 	private String model;
 	private String type;
@@ -25,9 +25,9 @@ public class Product {
 	}
 
 
-	public Product(int id, String brand, String model, String type, double price, String description) {
+	public Product(String brand, String model, String type, double price, String description) {
 		super();
-		this.id = id;
+	
 		this.brand = brand;
 		this.model = model;
 		this.type = type;
@@ -36,14 +36,7 @@ public class Product {
 	}
 
 
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 
 
 	public String getBrand() {
@@ -98,7 +91,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", brand=" + brand + ", model=" + model + ", type=" + type + ", price=" + price
+		return "Product [ brand=" + brand + ", model=" + model + ", type=" + type + ", price=" + price
 				+ ", description=" + description + "]";
 	}
 	
