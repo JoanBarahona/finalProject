@@ -9,11 +9,17 @@
 
 <meta charset="ISO-8859-1">
 <title>Fill in</title>
+<style>
+h2{
+text-align: center;
+color:pink
+}
+</style>
 </head>
 <body>
 	<div class="w3-container w3-card ">
 		<h2>Fill in and delete db</h2>
-		<p>options ...</p>
+		
 	</div>
 	<div class="w3-container w3-card-4 w3-display-middle w3-center"
 		style="width: 50%;">
@@ -25,19 +31,19 @@
 			class="w3-button w3-teal">Create 100 users</a>
 		<p></p>
 		<a th:href="@{/fillinuser(qtyToCreate=1000)}"
-			class="w3-button w3-teal">Create 1000 employees</a>
+			class="w3-button w3-teal">Create 1000 users</a>
 		<p></p>
 		<a th:href="@{/fillinuser(qtyToCreate=5000)}"
-			class="w3-button w3-teal">Create 5000 employees</a>
+			class="w3-button w3-teal">Create 5000 users</a>
 		<p></p>
 		<a th:href="@{/fillinuser(qtyToCreate=10000)}"
-			class="w3-button w3-teal">Create 10000 employees</a>
+			class="w3-button w3-teal">Create 10000 users</a>
 
 
 
-		<p>Delete all users</p>
+		<p></p>
 
-		<a th:href="@{/users/deleteAllUsers}" class="w3-button w3-red">Delete
+		<a th:href="@{/users/deleteAllUsers}" class="w3-button w3-pink">Delete
 			all users</a>
 		<p></p>
 		<p></p>

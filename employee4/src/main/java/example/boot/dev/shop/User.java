@@ -8,12 +8,10 @@ import javax.persistence.Table;
 
 @Entity  // Entidad
 @Table	// Tabla
-
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	private int id;
 	public String name;
 	private String surname;
