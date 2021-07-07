@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 		ExpenseRepository expenseRepository;
 
 		@RequestMapping("/allExpenses")
-		public String getAllEmployees(Model boxToView) {
+		public String getAllUsers(Model boxToView) {
 			
 			boxToView.addAttribute("expensesfromController", expenseRepository.findAll() );
 			

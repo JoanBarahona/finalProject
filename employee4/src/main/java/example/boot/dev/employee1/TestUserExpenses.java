@@ -1,7 +1,7 @@
 package example.boot.dev.employee1;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,7 +18,7 @@ public class TestUserExpenses implements CommandLineRunner {
 	private ShopRepository shopRepository;
 	
 	
-	public void run(String... args) throw Exception {
+	public void run(String... args) throws Exception {
 		User King = new User("King", "carpenter", 36, "@King",120,"1223");
 		User Sergi = new User("Sergi", "developer", 36, "@Sergi",203,"1521");
 		User Artur = new User("Artur", "Fisherman", 36, "@Artur",90,"0135");

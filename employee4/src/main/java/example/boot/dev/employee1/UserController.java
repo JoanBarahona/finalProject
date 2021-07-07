@@ -41,7 +41,7 @@ public class UserController {
 		}
 
 		else {
-			model.addAttribute("message", "deleted employee error, maybe there is no id .... or network connection .. or is already deleted few miliseconds ago .. or ...");
+			model.addAttribute("message", "deleted user error, maybe there is no id .... or network connection .. or is already deleted few miliseconds ago .. or ...");
 		}
 
 		// System.out.println("finishing removeUser" + id);
@@ -55,7 +55,7 @@ public class UserController {
 	}
 
 	@RequestMapping("/addUser")
-	public String inserEmployee(User user) {
+	public String inserUser(User user) {
 
 		userRepository.save(user);
 
@@ -113,7 +113,7 @@ public class UserController {
 		if (userFound.isPresent()) {
 
 			model.addAttribute("userfromController", userFound.get());
-			return "detailemployee";
+			return "detailuser";
 		}
 
 		else

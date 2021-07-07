@@ -18,7 +18,7 @@ import com.github.javafaker.Faker;
 public class HomeController {
 
 	@Autowired
-	private EmployeeRepository employeeRepository;
+	private UserRepository userRepository;
 
 	@RequestMapping({ "/home", "/" })
 	public String home() {
@@ -33,11 +33,11 @@ public class HomeController {
 	@RequestMapping({ "/fillin" })
 	public String finInDB() {
 
-		return "fillinemployee";
+		return "fillinuser";
 	}
 
-	@RequestMapping({ "/fillinemployee" })
-	public String fillInDBEmployee(int qtyToCreate) {
+	@RequestMapping({ "/fillinuser" })
+	public String fillInDBUser(int qtyToCreate) {
 
 		String alphabetChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!·$%&/()=?¿?=)()/*-+^*Ç¨_:;;:_+/+/";
 
@@ -68,7 +68,7 @@ public class HomeController {
 			 * } else { randomPublished = false; }
 			 */
 
-			employeeRepository.save(new Employee(faker.name().firstName(), faker.name().lastName(),
+			userRepository.save(new User(faker.name().firstName(), faker.name().lastName(),
 					faker.number().numberBetween(18, 80), faker.name().firstName() + "@java.com",
 					faker.number().randomDouble(2, 5, 2000),
 					String.valueOf((intRandom + 5) * count * 6) + stringRandom1 + stringRandom2 + stringRandom3));
@@ -76,7 +76,7 @@ public class HomeController {
 			count++;
 		}
 
-		return "redirect:/employee/allEmployees";
+		return "redirect:/user/allUsers";
 	}
 
 	public static int createIntRandom(int top) {
