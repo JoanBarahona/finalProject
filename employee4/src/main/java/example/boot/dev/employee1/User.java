@@ -24,7 +24,8 @@ public class User {
 	
 
 	public User() {
-		super();}
+		super();
+		}
 	
 	
 	
@@ -40,13 +41,7 @@ public class User {
 	}
 	
 	
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
 
 	public int getId() {
 		return id;
@@ -83,6 +78,13 @@ public class User {
 	}
 	public void setMonthSalary(double monthSalary) {
 		this.monthSalary = monthSalary;
+	}
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
